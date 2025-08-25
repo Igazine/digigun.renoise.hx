@@ -1,0 +1,3 @@
+--class-path haxe
+#--library digigun.core.hx
+--lua demo.lua

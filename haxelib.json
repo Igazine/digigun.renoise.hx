@@ -1,0 +1,13 @@
+{
+    "name": "digigun.renoise.hx",
+    "url" : "https://github.com/igazine/digigun.renoise.hx/",
+    "license": "Public",
+    "tags": ["digigun", "haxe", "renoise", "lua", "haxelib"],
+    "description": "Renoise Lua externs for Haxe",
+    "version": "0.0.1",
+    "classPath": "haxe/",
+    "releasenote": "Initial release",
+    "contributors": ["Igazine"],
+    "dependencies": {
+    }
+}
