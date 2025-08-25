@@ -21,8 +21,7 @@ extern class Track {
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("name_observable")
-    public var nameObservable:Observable;
+    public var name_observable:Observable;
 
     /**
      * A table of 3 bytes (ranging from 0 to 255) representing the red, green and blue channels of a color. {0xFF, 0xFF, 0xFF} is white {165, 73, 35} is the red from the Renoise logo
@@ -32,56 +31,44 @@ extern class Track {
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("color_observable")
-    public var colorObservable:Observable;
+    public var color_observable:Observable;
 
     /**
      * Range: (0 - 100) Color blend in percent
      */
-    @:native("color_blend")
-    public var colorBlend:UInt;
+    public var color_blend:UInt;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("color_blend_observable")
-    public var colorBlendObservable:Observable;
+    public var color_blend_observable:Observable;
 
     /**
      * Mute and solo states. Not available for the master track.
      */
-    @:native("mute_state")
-    public var muteState:MuteState;
+    public var mute_state:MuteState;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("mute_state_observable")
-    public var muteStateObservable:Observable;
+    public var mute_state_observable:Observable;
 
-    @:native("solo_state")
-    public var soloState:Bool;
+    public var solo_state:Bool;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("solo_state_observable")
-    public var soloStateObservable:Observable;
+    public var solo_state_observable:Observable;
 
-    @:native("prefx_volume")
-    public final prefxVolume:DeviceParameter;
+    public final prefx_volume:DeviceParameter;
 
-    @:native("prefx_panning")
-    public final prefxPanning:DeviceParameter;
+    public final prefx_panning:DeviceParameter;
 
-    @:native("prefx_width")
-    public final prefxWidth:DeviceParameter;
+    public final prefx_width:DeviceParameter;
 
-    @:native("postfx_volume")
-    public final postfxVolume:DeviceParameter;
+    public final postfx_volume:DeviceParameter;
 
-    @:native("postfx_panning")
-    public final postfxPanning:DeviceParameter;
+    public final postfx_panning:DeviceParameter;
 
     /**
      * Collapsed/expanded visual appearance.
@@ -91,93 +78,78 @@ extern class Track {
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("collapsed_observable")
-    public var collapsedObservable:Observable;
+    public var collapsed_observable:Observable;
 
-    @:native("group_parent")
-    public final groupParent:GroupTrack;
+    public final group_parent:GroupTrack;
 
     @:native("available_output_routings")
     private final __availableOutputRoutings:Table<Int, String>;
-    public var availableOutputRoutings(get, never):Array<String>;
-    private inline function get_availableOutputRoutings():Array<String> {
+    public var available_output_routings(get, never):Array<String>;
+    private inline function get_available_output_routings():Array<String> {
         return __availableOutputRoutings.toArray();
     }
 
     /**
-     * One of `availableOutputRoutings`
+     * One of `available_output_routings`
      */
-    @:native("output_routing")
-    public var outputRouting:String;
+    public var output_routing:String;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("output_routing_observable")
-    public var outputRoutingObservable:Observable;
+    public var output_routing_observable:Observable;
 
     /**
      * Range: (-100.0-100.0) in ms
      */
-    @:native("output_delay")
-    public var outputDelay:Float;
+    public var output_delay:Float;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("output_delay_observable")
-    public var outputDelayObservable:Observable;
+    public var output_delay_observable:Observable;
 
     /**
      * 8 OR 0 depending on the track type
      */
-    @:native("max_effect_columns")
-    public final maxEffectColumns:UInt;
+    public final max_effect_columns:UInt;
 
     /**
      * 1 OR 0 depending on the track type
      */
-    @:native("min_effect_columns")
-    public final minEffectColumns:UInt;
+    public final min_effect_columns:UInt;
 
     /**
      * 12 OR 0 depending on the track type
      */
-    @:native("max_note_columns")
-    public final maxNoteColumns:UInt;
+    public final max_note_columns:UInt;
 
     /**
      * 1 OR 0 depending on the track type
      */
-    @:native("min_note_columns")
-    public final minNoteColumns:UInt;
+    public final min_note_columns:UInt;
 
     /**
      * 1-8 OR 0-8, depending on the track type
      */
-    @:native("visible_effect_columns")
-    public var visibleEffectColumns:UInt;
+    public var visible_effect_columns:UInt;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("visible_effect_columns_observable")
-    public var visibleEffectColumnsObservable:Observable;
+    public var visible_effect_columns_observable:Observable;
 
     /**
      * 0 OR 1-12, depending on the track type
      */
-    @:native("visible_note_columns")
-    public var visibleNoteColumns:UInt;
+    public var visible_note_columns:UInt;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("visible_note_columns_observable")
-    public var visibleNoteColumnsObservable:Observable;
+    public var visible_note_columns_observable:Observable;
 
-    @:native("volume_column_visible")
-    public var volumeColumnVisible:Bool;
+    public var volume_column_visible:Bool;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
@@ -191,20 +163,16 @@ extern class Track {
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("panning_column_visible_observable")
-    public var panningColumnVisibleObservable:Observable;
+    public var panning_column_visible_observable:Observable;
 
-    @:native("delay_column_visible")
-    public var delayColumnVisible:Bool;
+    public var delay_column_visible:Bool;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
      */
-    @:native("delay_column_visible_observable")
-    public var delayColumnVisibleObservable:Observable;
+    public var delay_column_visible_observable:Observable;
 
-    @:native("sample_effects_column_visible")
-    public var sampleEffectsColumnVisible:Bool;
+    public var sample_effects_column_visible:Bool;
 
     /**
      * Track changes to document properties or general states by attaching listener functions to it.
@@ -217,8 +185,8 @@ extern class Track {
      */
     @:native("available_devices")
     private final __availableDevices:Table<Int, String>;
-    public var availableDevices(get, never):Array<String>;
-    private inline function get_availableDevices():Array<String> {
+    public var available_devices(get, never):Array<String>;
+    private inline function get_available_devices():Array<String> {
         return __availableDevices.toArray();
     }
 
@@ -227,8 +195,8 @@ extern class Track {
      */
     @:native("available_device_infos")
     private final __availableDeviceInfos:Table<Int, AudioDeviceInfo>;
-    public var availableDeviceInfos(get, never):Array<AudioDeviceInfo>;
-    private inline function get_availableDeviceInfos():Array<AudioDeviceInfo> {
+    public var available_device_infos(get, never):Array<AudioDeviceInfo>;
+    private inline function get_available_device_infos():Array<AudioDeviceInfo> {
         return __availableDeviceInfos.toArray();
     }
 
@@ -245,8 +213,7 @@ extern class Track {
     /**
      * Track changes to document lists by attaching listener functions to it. NB: Notifiers will not broadcast changes made to list items, but only changes to the lists layout (items got added, removed, swapped).
      */
-    @:native("devices_observable")
-    public var devicesObservable:Observable;
+    public var devices_observable:Observable;
 
     /**
      * Insert a new device at the given position. `devicePath` must be one of `Track.availableDevices`.
@@ -254,24 +221,21 @@ extern class Track {
      * @param deviceIndex 
      * @return AudioDevice
      */
-    @:native("insert_device_at")
-    public function insertDeviceAt(devicePath:String, deviceIndex:UInt):AudioDevice;
+    public function insert_device_at(devicePath:String, deviceIndex:UInt):AudioDevice;
 
     /**
      * Delete an existing device in a track. **The mixer device at index 1 can not be deleted from any track**.
      * @param deviceIndex 
      * @return AudioDevice
      */
-    @:native("delete_device_at")
-    public function deleteDeviceAt(deviceIndex:UInt):Void;
+    public function delete_device_at(deviceIndex:UInt):Void;
 
     /**
      * Swap the positions of two devices in the device chain. The mixer device at index 1 can not be swapped or moved.
      * @param deviceIndex1 
      * @param deviceIndex2 
      */
-    @:native("swap_devices_at")
-    public function swapDevicesAt(deviceIndex1:UInt, deviceIndex2:UInt):Void;
+    public function swap_devices_at(deviceIndex1:UInt, deviceIndex2:UInt):Void;
 
     /**
      * Access to a single device by index. Use property devices to iterate over all devices and to query the device count.
@@ -294,39 +258,31 @@ extern class Track {
      * @param columnIndex 
      * @return Bool
      */
-    @:native("column_is_muted")
-    public function columnIsMuted(columnIndex:UInt):Bool;
+    public function column_is_muted(columnIndex:UInt):Bool;
+    
+    public function column_is_muted_observable(columnIndex:UInt):Observable;
 
-    @:native("column_is_muted_observable")
-    public function columnIsMutedObservable(columnIndex:UInt):Observable;
-
-    @:native("set_column_is_muted")
-    public function setColumnIsMuted(columnIndex:UInt, muted:Bool):Void;
+    public function set_column_is_muted(columnIndex:UInt, muted:Bool):Void;
 
     /**
      * Note column names. Only valid within (1-track.max_note_columns)
      * @param columnIndex 
      * @return String
      */
-    @:native("column_name")
-    public function columnName(columnIndex:UInt):String;
+    public function column_name(columnIndex:UInt):String;
 
-    @:native("column_name_observable")
-    public function columnNameObservable(columnIndex:UInt):Observable;
+    public function column_name_observable(columnIndex:UInt):Observable;
 
-    @:native("set_column_name")
-    public function setColumnName(columnIndex:UInt, name:String):Void;
+    public function set_column_name(columnIndex:UInt, name:String):Void;
 
     /**
      * Swap the positions of two note or effect columns within a track.
      * @param columnIndex1 
      * @param columnIndex2 
      */
-    @:native("swap_note_columns_at")
-    public function swapNoteColumnsAt(columnIndex1:UInt, columnIndex2:UInt):Void;
+    public function swap_note_columns_at(columnIndex1:UInt, columnIndex2:UInt):Void;
 
-    @:native("swap_effect_columns_at")
-    public function swapEffectColumnsAt(columnIndex1:UInt, columnIndex2:UInt):Void;
+    public function swap_effect_columns_at(columnIndex1:UInt, columnIndex2:UInt):Void;
 
 }
 
