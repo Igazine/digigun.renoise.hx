@@ -18,9 +18,11 @@ Lua arrays are basically integer-indexed tables. In Haxe, these Lua arrays are c
 
 Therefore ensure the modified array is written back to the previously retrieved reference. Eg:
 
-```
+```haxe
 final comments = instrument.comments;
 comments.push("My new comment");
+// Directly editing the array has no effect on the comments property,
+// so make sure it's properly set
 instrument.comments = comments;
 
 ```
