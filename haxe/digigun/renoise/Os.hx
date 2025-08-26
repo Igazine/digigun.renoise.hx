@@ -4,8 +4,8 @@ import lua.Table;
 
 using digigun.renoise.Helper;
 
-@:native("renoise.OS")
-extern class Os {
+@:native("OS")
+extern class OS {
     /**
      * Returns the platform the script is running on:
      * @return OsType
@@ -26,7 +26,7 @@ extern class Os {
      * @return Array<String>
      */
     static public inline function dirnames(path:String):Array<String> {
-        return this.__dirnames(path).toArray();
+        return OS.__dirnames(path).toArray();
     }
 
     @:native("filenames")
@@ -38,7 +38,7 @@ extern class Os {
      * @return Array<String>
      */
     static public inline function filenames(path:String, ?file_extensions:Array<String>):Array<String> {
-        return this.__filenames(path, file_extensions?.toTable()).toArray();
+        return OS.__filenames(path, file_extensions?.toTable()).toArray();
     }
 
     /**
