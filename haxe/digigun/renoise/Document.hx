@@ -100,6 +100,14 @@ extern class ObservableString extends Observable {
     public function fromString(value:String):String;
 }
 
+/**
+ * A document list is a document sub component which may contain other document nodes in an observable list.
+ */
+@:native("renoise.Document.DocumentList")
+extern class DocumentList {
+
+}
+
 @:native("NotifierFunction")
 extern typedef NotifierFunction = Void->Void;
 
