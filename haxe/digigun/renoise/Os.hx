@@ -4,7 +4,7 @@ import lua.Table;
 
 using digigun.renoise.Helper;
 
-@:native("OS")
+@:native("os")
 extern class OS {
     /**
      * Returns the platform the script is running on:
