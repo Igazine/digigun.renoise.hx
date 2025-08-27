@@ -14,7 +14,7 @@ haxelib git digigun.renoise.hx https://github.com/Igazine/digigun.renoise.hx
 
 #### Arrays
 
-Lua arrays are basically integer-indexed tables. In Haxe, these Lua arrays are converted to Haxe arrays for easier handling in getters, setters and any function arguments.
+Lua arrays are basically integer-indexed tables. In Haxe, these Lua arrays are converted to Haxe arrays for easier handling and manipulation in getters, setters and any function arguments.
 
 Therefore ensure the modified array is written back to the previously retrieved reference. Eg:
 
