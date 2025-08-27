@@ -8,23 +8,23 @@ using digigun.renoise.Helper;
 @:native("renoise.InstrumentPluginProperties")
 extern class InstrumentPluginProperties {
     @:native("available_plugins")
-    private final available_plugins:Table<Int, String>;
+    private final __available_plugins:Table<Int, String>;
     /**
      * List of all currently available plugins. This is a list of unique plugin names which also contains the plugin's type (VST/AU/DSSI/...), not including the vendor names as visible in Renoise's GUI. So its an identifier, and not the name as visible in the GUI. When no plugin is loaded, the identifier is an empty string.
      */
     public var available_plugins(get, never):Array<String>;
     private inline function get_available_plugins():Array<String> {
-        return available_plugins.toArray();
+        return __available_plugins.toArray();
     }
 
     @:native("available_plugin_infos")
-    private final available_plugin_infos:Table<Int, PluginInfo>;
+    private final __available_plugin_infos:Table<Int, PluginInfo>;
     /**
      * Returns a list of tables containing more information about the plugins.
      */
     public var available_plugin_infos(get, never):Array<PluginInfo>;
     private inline function get_available_plugin_infos():Array<PluginInfo> {
-        return available_plugin_infos.toArray();
+        return __available_plugin_infos.toArray();
     }
 
     /**
