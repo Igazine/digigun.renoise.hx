@@ -1,7 +1,7 @@
 package digigun.renoise;
 
-import lua.Table;
 import digigun.renoise.Document.Observable;
+import lua.Table;
 
 using digigun.renoise.Helper;
 
